@@ -36,15 +36,15 @@ const letterPositions = function (sentance) {
     let letter = str[index];
     if (letter !== " ") {
       if (results[letter]) {
-        results[letter].push(index);
+        results[letter].push(+index);
       } else {
-        results[letter] = [index];
+        results[letter] = [+index];
       }
     }
   }
 
   // console.log(str);
-  // console.log(results);
+  console.log(results);
 
   return results;
 };
