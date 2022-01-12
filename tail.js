@@ -1,4 +1,3 @@
-/*
 const assertEqual = function (actual, expected) {
   actual === expected
     ? console.log(`✅ ✅ ✅ Assertion Passed: ${actual} === ${expected}`)
@@ -20,4 +19,3 @@ assertEqual(words.length, 3);
 
 tail(["Hello"]);
 tail([]);
-*/
