@@ -23,6 +23,7 @@ const motorbikes = ["yamaha", "kawasaki", "honda", "ducati"];
 const guitars = ["also yamaha", "washburn", "dean", "ibanez"];
 const rando = [null, undefined, [1, 2], true, false];
 
+//------------map function-------------------
 const map = function (arr, callback) {
   const results = [];
 
