@@ -1,16 +1,16 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   actual === expected
     ? console.log(`✅ ✅ ✅ Assertion Passed: ${actual} === ${expected}`)
     : console.log(`🛑 🛑 🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const findKey = function(obj, callback) {
+const findKey = function (obj, callback) {
   let ouput;
   for (let key in obj) {
     // console.log(key); movie name
     // console.log(obj);whole object
     // console.log(callback(obj[key])); returns the true or false
-    if (callback(obj[key]) === true) {
+    if (callback(obj[key])) {
       // console.log(key); returns the name
       ouput = key;
       break;
