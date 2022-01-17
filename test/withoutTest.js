@@ -1,4 +1,5 @@
 const without = require("../without");
+const assertArraysEqual = require("../assertArraysEqual");
 
 const thisOne = [1, 2, 3];
 without(thisOne, [1]);
