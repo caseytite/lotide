@@ -1,3 +1,5 @@
+
+
 const letterPositions = function (sentance) {
   const results = {};
   //for and for of
@@ -44,29 +46,9 @@ const letterPositions = function (sentance) {
   }
 
   // // console.log(str);
-  console.log(results);
+  // console.log(results);
 
   return results;
 };
 
-letterPositions("lighthouse in the house");
-
-const eqArrays = function (arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
-  for (let i = 0; i < arr1.length; i++) {
-    if (Array.isArray(arr1[i]) && Array.isArray(arr2[i])) {
-      i++;
-      return eqArrays(arr1[i], arr2[i]);
-    } else if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function (arr1, arr2) {
-  eqArrays(arr1, arr2) ? console.log(true) : console.log(false);
-};
-
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [2]);
+module.exports = letterPositions;

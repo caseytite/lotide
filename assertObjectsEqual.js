@@ -1,45 +1,3 @@
-const assertEqual = function (actual, expected) {
-  actual === expected
-    ? console.log(`✅ ✅ ✅ Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🛑 🛑 🛑 Assertion Failed: ${actual} !== ${expected}`);
-};
-
-const eqArrays = function (arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
-  for (let i = 0; i < arr1.length; i++) {
-    if (Array.isArray(arr1[i]) && Array.isArray(arr2[i])) {
-      i++;
-      return eqArrays(arr1[i], arr2[i]);
-    } else if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-const eqObjects = function (obj1, obj2) {
-  // Returns true if both objects have identical keys with identical values.
-  // Otherwise you get back a big fat false!
-  let key1 = Object.keys(obj1);
-  let key2 = Object.keys(obj2);
-
-  if (key1.length !== key2.length) return false;
-
-  for (let key of key1) {
-    if (Array.isArray(obj1[key]) || Array.isArray(obj2[key])) {
-      const result = eqArrays(obj1[key], obj2[key]);
-      console.log(result);
-      if (!result) return false;
-    }
-    // console.log(obj1[key], obj2[key]);
-    else if (obj1[key] !== obj2[key]) {
-      console.log(key);
-      return false;
-    }
-  }
-
-  return true;
-};
-
 const assertObjectsEqual = function (actual, expected) {
   const inspect = require("util").inspect;
   actual === expected
@@ -51,22 +9,4 @@ const assertObjectsEqual = function (actual, expected) {
       );
 };
 
-const first = {
-  name: "Casey",
-  age: 31,
-  adress: [210, "douglas"],
-};
-const second = {
-  name: "Casey",
-  age: 31,
-  adress: [210, "douglas"],
-};
-
-const third = {
-  name: "Casey",
-  age: 31,
-  adress: [211, "douglas"],
-};
-
-assertObjectsEqual(eqObjects(first, second), true);
-assertObjectsEqual(eqObjects(first, third), false);
+module.exports = assertObjectsEqual;
