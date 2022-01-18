@@ -7,7 +7,4 @@ const tail = function (arr) {
   return output;
 };
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-console.log(result);
-
 module.exports = tail;
