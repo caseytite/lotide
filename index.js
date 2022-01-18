@@ -38,5 +38,3 @@ module.exports = {
   takeUntil,
   without,
 };
-
-console.log(require("./index"));
