@@ -12,7 +12,6 @@ const letterPositions = function (sentance) {
   //   let char = str[i];
   //   if (char !== " ") {
   //     if (results[char]) {
-  //       console.log(char);
   //       results[char].push(i);
   //     } else {
   //       results[char] = [i];
@@ -44,9 +43,6 @@ const letterPositions = function (sentance) {
       }
     }
   }
-
-  // // console.log(str);
-  // console.log(results);
 
   return results;
 };

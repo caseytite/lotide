@@ -9,11 +9,9 @@ const countLetters = function (sentance) {
       letterCount[char] = 1;
     }
   }
-  // console.log(letterCount);
+ 
   return letterCount;
 };
 
-/*
-when looping the object we have to assign it a value first otherwise if we try to increment it we will be tryin to add 1 to undefined and that will not work either returning NaN or undefiend so first we set it to 1 and then we can increment it
-*/
+
 module.exports = countLetters;

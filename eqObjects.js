@@ -19,13 +19,9 @@ const eqObjects = function (obj1, obj2) {
     console.log(Array.isArray(obj1[key]), Array.isArray(obj2[key]));
     if (Array.isArray(obj1[key]) || Array.isArray(obj2[key])) {
       const result = eqArrays(obj1[key], obj2[key]);
-
-      console.log(result);
       if (!result) return false;
     }
-    // console.log(obj1[key], obj2[key]);
     else if (obj1[key] !== obj2[key]) {
-      console.log(key);
       return false;
     }
   }
