@@ -40,8 +40,8 @@ const eqObjects = function (one, two) {
     if (Array.isArray(one[item]) || Array.isArray(two[item])) {
       if (one[item].length !== two[item].length) {
         return false;
-      } else {
-        eqArrays(one[item], two[item]);
+      } else if (!eqArrays(one[item], two[item])) {
+        return false
       }
     } else if (one[item] !== two[item]) {
       return false;
@@ -49,5 +49,6 @@ const eqObjects = function (one, two) {
   }
   return true;
 };
+
 
 module.exports = eqObjects;
